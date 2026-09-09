@@ -67,14 +67,20 @@ const allowedOrigins = (process.env.CORS_ORIGIN || 'http://localhost:5173,http:/
   .filter(Boolean)
 
 app.use(
-  cors({
-    origin(origin, callback) {
-      // Same-origin requests and server-to-server calls arrive without an Origin.
-      if (!origin || allowedOrigins.includes(origin)) return callback(null, true)
-      callback(new Error(`Origin ${origin} is not allowed by CORS.`))
-    },
-    methods: ['GET', 'POST'],
-    maxAge: 600,
+  cors((req, callback) => {
+    const origin = req.headers.origin
+    // Same-origin requests and server-to-server calls arrive without an Origin.
+    let allowed = !origin || allowedOrigins.includes(origin)
+    if (!allowed) {
+      // Module scripts and CORS-mode fetches send an Origin header even for
+      // same-origin requests; allow those by matching against the Host header.
+      try {
+        allowed = new URL(origin).host === req.headers.host
+      } catch {
+        // Malformed Origin header stays rejected.
+      }
+    }
+    callback(null, { origin: allowed, methods: ['GET', 'POST'], maxAge: 600 })
   }),
 )
 
