@@ -38,7 +38,7 @@ async function notify(kind, record) {
     if (process.env.NODE_ENV !== 'production') {
       console.log(`[notify:${kind}]`, record.reference || record.id, record.email)
     }
-    // await mailer.send({ to: university.email.admissions, ... })
+    // await mailer.send({ to: university.email.registrar, ... })
   } catch (err) {
     console.error(`[notify:${kind}] failed`, err)
   }

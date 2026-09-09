@@ -49,7 +49,7 @@ export default function Footer() {
               <li>
                 <Icon name="mail" />
                 <span>
-                  <a href={`mailto:${email.admissions}`}>{email.admissions}</a>
+                  <a href={`mailto:${email.registrar}`}>{email.registrar}</a>
                 </span>
               </li>
             </ul>

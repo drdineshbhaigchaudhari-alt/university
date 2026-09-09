@@ -15,16 +15,14 @@ export const university = {
   session: '2026–27',
 
   address: {
-    line1: 'Ved Reyan Knowledge City, NH-44',
-    line2: 'Rajpura, District Patiala',
-    line3: 'Punjab 140401, India',
+    line1: 'S P Ring Road, Ognaj Circle',
+    line2: 'Nr. Lions Karnavati Eye Hospital, Gota - Vadsar Highway, Lapkaman',
+    line3: 'Ahmedabad - 380060, Gujarat, India',
   },
   phone: { tollFree: '1800 419 7788', landline: '+91 1762 500 100' },
   email: {
-    admissions: 'admissions@vedreyan.edu.in',
-    registrar: 'registrar@vedreyan.edu.in',
-    grievance: 'grievance@vedreyan.edu.in',
-    placements: 'placements@vedreyan.edu.in',
+    hr: 'hr@vedreyanuniversity.com',
+    registrar: 'registrar@vedreyanuniversity.com',
   },
 
   keyDates: [

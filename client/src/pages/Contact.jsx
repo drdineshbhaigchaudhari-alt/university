@@ -31,7 +31,7 @@ const offices = [
     name: 'Admissions office',
     detail: 'Applications, eligibility, counselling, scholarships and fee queries.',
     phone: university.phone.tollFree,
-    email: university.email.admissions,
+    email: university.email.registrar,
     hours: 'Monday–Saturday, 09:00–18:00',
   },
   {
@@ -45,14 +45,14 @@ const offices = [
     name: 'Placement cell',
     detail: 'Campus drives, internship quotas, visiting-faculty modules, alumni mentoring.',
     phone: university.phone.landline,
-    email: university.email.placements,
+    email: university.email.hr,
     hours: 'Monday–Friday, 10:00–17:00',
   },
   {
     name: 'Grievance & compliance',
     detail: 'Grievance redressal, anti-ragging, internal complaints, RTI and disclosures.',
     phone: university.phone.landline,
-    email: university.email.grievance,
+    email: university.email.registrar,
     hours: 'Monday–Saturday, 09:00–18:00 · helpline 24×7',
   },
 ]
@@ -60,7 +60,7 @@ const offices = [
 const grievanceRoutes = [
   {
     q: 'Academic grievance — marks, attendance, teaching, supervision',
-    a: 'Raise it first with the Head of Department, then the Dean of the school, then the Grievance Redressal Committee, which must respond within fifteen working days. Examination results have a separate route: re-evaluation and answer-script inspection, with a published fee and a thirty-day window from the date of result. Write to grievance@vedreyan.edu.in if you are unsure which applies — it will be routed rather than returned.',
+    a: 'Raise it first with the Head of Department, then the Dean of the school, then the Grievance Redressal Committee, which must respond within fifteen working days. Examination results have a separate route: re-evaluation and answer-script inspection, with a published fee and a thirty-day window from the date of result. Write to registrar@vedreyanuniversity.com if you are unsure which applies — it will be routed rather than returned.',
   },
   {
     q: 'Ragging',
@@ -112,7 +112,7 @@ export default function Contact() {
         }
         notes={[
           { label: 'Helpline', value: `${phone.tollFree} (toll free)` },
-          { label: 'Admissions', value: email.admissions },
+          { label: 'Admissions', value: email.registrar },
           { label: 'Campus visits', value: 'Saturdays, 10:30' },
         ]}
       />
@@ -164,11 +164,9 @@ export default function Contact() {
             <div className="mt-3">
               <FeatureCard icon="mail" title="Email">
                 <p className="mb-0">
-                  <a href={`mailto:${email.admissions}`}>{email.admissions}</a> — admissions
+                  <a href={`mailto:${email.registrar}`}>{email.registrar}</a> — registrar &amp; admissions
                   <br />
-                  <a href={`mailto:${email.registrar}`}>{email.registrar}</a> — registrar
-                  <br />
-                  <a href={`mailto:${email.grievance}`}>{email.grievance}</a> — grievance
+                  <a href={`mailto:${email.hr}`}>{email.hr}</a> — HR &amp; careers
                 </p>
               </FeatureCard>
             </div>

@@ -275,7 +275,7 @@ export default function Admissions() {
               <FeatureCard icon="mail" title="Talk to the international office">
                 <p>
                   Write to{' '}
-                  <a href={`mailto:${university.email.admissions}`}>{university.email.admissions}</a>{' '}
+                  <a href={`mailto:${university.email.registrar}`}>{university.email.registrar}</a>{' '}
                   with your qualification, your country and the programme you want. You will get a
                   direct answer on eligibility before you are asked for anything else.
                 </p>
