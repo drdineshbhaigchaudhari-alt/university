@@ -1,0 +1,27 @@
+{
+  "name": "ved-reyan-university",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Website for Ved Reyan University of Medical, Pharmaceutical & Health Sciences \u2014 React client + Node/Express API",
+  "type": "module",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "engines": {
+    "node": ">=18.18"
+  },
+  "scripts": {
+    "dev": "concurrently -n api,web -c cyan,magenta \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:client": "npm --workspace client run dev",
+    "dev:server": "npm --workspace server run dev",
+    "build": "npm --workspace client run build",
+    "preview": "npm --workspace client run preview",
+    "start": "npm --workspace server run start",
+    "lint": "npm --workspace client run lint",
+    "smoke": "npm --workspace client run smoke"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
