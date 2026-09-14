@@ -93,18 +93,12 @@ export default function Header() {
 
       <div className="wrap">
         <div className="brandbar">
-          <Link className="brand" to="/">
+          <Link className="brand" to="/" aria-label="Ved Reyan University Home">
             <img
-              className="brand__mark"
-              src="/assets/img/logo.svg"
-              alt="Ved Reyan University crest"
-              width="52"
-              height="52"
+              className="brand__logo-img"
+              src="/assets/img/logo.png"
+              alt="Ved Reyan University - Medical · Pharmaceutical · Health Sciences"
             />
-            <span className="brand__text">
-              <span className="brand__name">{university.shortName}</span>
-              <span className="brand__sub">Medical · Pharmaceutical · Health Sciences</span>
-            </span>
           </Link>
           <div className="brandbar__actions">
             <Link className="btn btn--ghost btn--sm" to="/programmes">

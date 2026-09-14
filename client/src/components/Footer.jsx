@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div>
             <div className="footer-brand">
-              <img src="/assets/img/logo-light.svg" alt="" width="46" height="46" />
+              <img src="/assets/img/logo-crest.png" alt="Ved Reyan University crest" width="46" height="46" />
               <span>
                 <b>{university.shortName}</b>
                 <small>Medical · Pharmaceutical · Health Sciences</small>
