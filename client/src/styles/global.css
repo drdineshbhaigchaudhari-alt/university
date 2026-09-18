@@ -185,7 +185,7 @@ blockquote{margin:0;padding:0}
 
 .brandbar{display:flex;align-items:center;gap:20px;min-height:82px}
 .brand{display:flex;align-items:center;gap:14px;flex:1 1 auto;min-width:0}
-.brand__logo-img{height:58px;max-height:58px;width:auto;max-width:100%;object-fit:contain;display:block}
+.brand__logo-img{height:64px;max-height:64px;width:auto;max-width:100%;object-fit:contain;display:block}
 .brand__mark{width:52px;height:52px;flex:0 0 52px}
 .brand__text{min-width:0}
 .brand__name{

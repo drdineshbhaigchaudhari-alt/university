@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { faculty, facultyRegister, leadership, schools } from '@shared/content'
+import { faculty, facultyRegister, leadership, pharmacyFacultyStaff, schools } from '@shared/content'
 import useDocumentMeta from '../hooks/useDocumentMeta.js'
 import Hero from '../components/Hero.jsx'
 import { HeroStrip } from '../components/Stats.jsx'
@@ -18,6 +18,7 @@ import {
 const sections = [
   { id: 'leadership', label: 'Leadership' },
   { id: 'profiles', label: 'Profiles' },
+  { id: 'pharmacy-directory', label: 'Pharmacy Faculty & Staff' },
   { id: 'register', label: 'Full register' },
   { id: 'mentoring', label: 'Mentoring' },
 ]
@@ -157,6 +158,49 @@ export default function Faculty() {
             </Grid>
           </div>
         ) : null}
+      </Section>
+
+      {/* ------------------------------------------- pharmacy-directory */}
+      <Section id="pharmacy-directory" tone="paper">
+        <SectionHead
+          eyebrow="Department Directory"
+          title="University Institute of Pharmaceutical Sciences — Faculty & Staff"
+          lead="Direct extension numbers, mobile helplines, and email addresses for faculty, laboratory superintendents, and technical officers."
+        />
+        <DataTable
+          caption="Faculty & Staff directory with official telephone numbers and emails (STD Code: 0172)."
+          columns={[
+            { key: 'name', label: 'Name', render: (row) => <b>{row.name}</b> },
+            { key: 'designation', label: 'Designation' },
+            { key: 'department', label: 'Department / Section' },
+            {
+              key: 'phone',
+              label: 'Telephone Number',
+              render: (row) => (
+                <span>
+                  {row.phone.split(',').map((num, i) => (
+                    <span key={num}>
+                      {i > 0 ? ', ' : ''}
+                      <a href={`tel:${num.replace(/[\s+]/g, '')}`}>{num.trim()}</a>
+                    </span>
+                  ))}
+                </span>
+              ),
+            },
+            {
+              key: 'email',
+              label: 'E-mail',
+              render: (row) =>
+                row.email ? (
+                  <a href={`mailto:${row.email}`}>{row.email}</a>
+                ) : (
+                  <span className="text-muted">—</span>
+                ),
+            },
+          ]}
+          rows={pharmacyFacultyStaff.map((row) => ({ ...row, key: row.name }))}
+          footnote="Telephone numbers can be dialed directly with STD code 0172 (e.g. 0172-2534101). List displayed in departmental hierarchy."
+        />
       </Section>
 
       {/* ----------------------------------------------------------- register */}

@@ -36,22 +36,29 @@ const offices = [
   },
   {
     name: 'Registrar’s office',
-    detail: 'Transcripts, migration and provisional certificates, verification, statutory disclosures.',
-    phone: university.phone.landline,
-    email: university.email.registrar,
+    detail: 'Prof. Yajvender Pal Verma — Transcripts, migration, verification, statutory disclosures.',
+    phone: '0172 2541716, 2534867',
+    email: 'regr@vedruni.com, registrar@vedruni.com',
     hours: 'Monday–Friday, 10:00–17:00',
   },
   {
-    name: 'Placement cell',
-    detail: 'Campus drives, internship quotas, visiting-faculty modules, alumni mentoring.',
-    phone: university.phone.landline,
-    email: university.email.hr,
+    name: 'Department of Pharmaceutical Sciences (UIPS)',
+    detail: 'Prof. (Dr.) Ranju Bansal — Chairperson office, academic administration, research.',
+    phone: '0172 2534101, 9876061147',
+    email: 'chairperson.uips@vedruni.com',
+    hours: 'Monday–Friday, 09:00–17:00',
+  },
+  {
+    name: 'Placement & Industry Cell',
+    detail: 'Prof. V. R. Sinha — Campus drives, internship quotas, visiting modules, CDMO partners.',
+    phone: '0172 2534107, 9417554847',
+    email: 'vrsinha@vedruni.com, hr@vedruni.com',
     hours: 'Monday–Friday, 10:00–17:00',
   },
   {
-    name: 'Grievance & compliance',
-    detail: 'Grievance redressal, anti-ragging, internal complaints, RTI and disclosures.',
-    phone: university.phone.landline,
+    name: 'Grievance & Student Welfare',
+    detail: 'Superintendent Ram Kumar — Grievance redressal, anti-ragging, RTI and student support.',
+    phone: '0172 2534110, 9463495832',
     email: university.email.registrar,
     hours: 'Monday–Saturday, 09:00–18:00 · helpline 24×7',
   },
@@ -60,7 +67,7 @@ const offices = [
 const grievanceRoutes = [
   {
     q: 'Academic grievance — marks, attendance, teaching, supervision',
-    a: 'Raise it first with the Head of Department, then the Dean of the school, then the Grievance Redressal Committee, which must respond within fifteen working days. Examination results have a separate route: re-evaluation and answer-script inspection, with a published fee and a thirty-day window from the date of result. Write to registrar@vedreyanuniversity.com if you are unsure which applies — it will be routed rather than returned.',
+    a: 'Raise it first with the Head of Department, then the Dean of the school, then the Grievance Redressal Committee, which must respond within fifteen working days. Examination results have a separate route: re-evaluation and answer-script inspection, with a published fee and a thirty-day window from the date of result. Write to registrar@vedruni.com if you are unsure which applies — it will be routed rather than returned.',
   },
   {
     q: 'Ragging',
@@ -188,12 +195,30 @@ export default function Contact() {
             {
               key: 'phone',
               label: 'Telephone',
-              render: (row) => <a href={`tel:${row.phone.replace(/[\s+]/g, '')}`}>{row.phone}</a>,
+              render: (row) => (
+                <span>
+                  {row.phone.split(',').map((num, i) => (
+                    <span key={num}>
+                      {i > 0 ? ', ' : ''}
+                      <a href={`tel:${num.replace(/[\s+]/g, '')}`}>{num.trim()}</a>
+                    </span>
+                  ))}
+                </span>
+              ),
             },
             {
               key: 'email',
               label: 'Email',
-              render: (row) => <a href={`mailto:${row.email}`}>{row.email}</a>,
+              render: (row) => (
+                <span>
+                  {row.email.split(',').map((em, i) => (
+                    <span key={em}>
+                      {i > 0 ? ', ' : ''}
+                      <a href={`mailto:${em.trim()}`}>{em.trim()}</a>
+                    </span>
+                  ))}
+                </span>
+              ),
             },
             { key: 'hours', label: 'Hours' },
           ]}
@@ -273,16 +298,27 @@ export default function Contact() {
           />
         </Grid>
 
-        <div className="mt-4">
-          <DividerNote>
-            <p>
-              <strong>Adding a map.</strong> This build ships without an embedded map so that the
-              site loads no third-party trackers by default. To add one, drop an iframe or a
-              Leaflet/Mapbox component into this section and extend the{' '}
-              <code>connectSrc</code> and <code>frameSrc</code> directives in{' '}
-              <code>server/src/index.js</code> — see README.md.
-            </p>
-          </DividerNote>
+        <div
+          className="mt-4"
+          style={{
+            borderRadius: 'var(--radius)',
+            overflow: 'hidden',
+            boxShadow: 'var(--shadow-md)',
+            border: '1px solid var(--line)',
+            lineHeight: 0,
+            background: 'var(--paper)',
+          }}
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d458.6576171009411!2d72.5044354424655!3d23.124135618957826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1789744671336!5m2!1sen!2sin"
+            width="100%"
+            height="450"
+            style={{ border: 0, display: 'block', width: '100%' }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+            title="Ved Reyan University Campus Location"
+          />
         </div>
       </Section>
 

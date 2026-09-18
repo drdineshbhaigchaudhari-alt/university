@@ -22,6 +22,8 @@ import {
   hospital,
   faculty,
   facultyRegister,
+  pharmacyFacultyStaff,
+  registrarInfo,
   leadership,
   alumni,
   news,
@@ -109,7 +111,7 @@ router.get('/facilities', (req, res) => {
 })
 
 router.get('/people', (req, res) => {
-  res.json({ leadership, faculty, facultyRegister, alumni })
+  res.json({ leadership, faculty, facultyRegister, pharmacyFacultyStaff, registrarInfo, alumni })
 })
 
 router.get('/news', (req, res) => {

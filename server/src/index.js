@@ -50,6 +50,7 @@ app.use(
         fontSrc: ["'self'", 'https://fonts.gstatic.com', 'data:'],
         imgSrc: ["'self'", 'data:'],
         connectSrc: ["'self'"],
+        frameSrc: ["'self'", 'https://www.google.com'],
         objectSrc: ["'none'"],
         frameAncestors: ["'self'"],
         baseUri: ["'self'"],

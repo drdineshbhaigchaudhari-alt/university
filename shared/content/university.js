@@ -19,10 +19,17 @@ export const university = {
     line2: 'Nr. Lions Karnavati Eye Hospital, Gota - Vadsar Highway, Lapkaman',
     line3: 'Ahmedabad - 380060, Gujarat, India',
   },
-  phone: { tollFree: '1800 419 7788', landline: '+91 1762 500 100' },
+  phone: {
+    tollFree: '1800 419 7788',
+    landline: '0172 2541716',
+    registrar: '0172 2541716, 2534867',
+    uipsChairperson: '0172 2534101, 9876061147',
+  },
   email: {
-    hr: 'hr@vedreyanuniversity.com',
-    registrar: 'registrar@vedreyanuniversity.com',
+    hr: 'hr@vedruni.com',
+    registrar: 'registrar@vedruni.com',
+    regrPU: 'regr@vedruni.com',
+    chairpersonUIPS: 'chairperson.uips@vedruni.com',
   },
 
   keyDates: [

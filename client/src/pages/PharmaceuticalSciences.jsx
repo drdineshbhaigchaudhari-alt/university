@@ -16,6 +16,7 @@ import {
   news,
   guestLectures,
   pharmacyFaqs,
+  pharmacyFacultyStaff,
 } from '@shared/content'
 import useDocumentMeta from '../hooks/useDocumentMeta.js'
 import Hero from '../components/Hero.jsx'
@@ -597,6 +598,43 @@ export default function PharmaceuticalSciences() {
             <PersonCard key={person.id} person={person} />
           ))}
         </Grid>
+
+        <div className="mt-4">
+          <DataTable
+            caption="University Institute of Pharmaceutical Sciences — Faculty & Staff Directory"
+            columns={[
+              { key: 'name', label: 'Name', render: (row) => <b>{row.name}</b> },
+              { key: 'designation', label: 'Designation' },
+              { key: 'department', label: 'Department / Section' },
+              {
+                key: 'phone',
+                label: 'Telephone Number',
+                render: (row) => (
+                  <span>
+                    {row.phone.split(',').map((num, i) => (
+                      <span key={num}>
+                        {i > 0 ? ', ' : ''}
+                        <a href={`tel:${num.replace(/[\s+]/g, '')}`}>{num.trim()}</a>
+                      </span>
+                    ))}
+                  </span>
+                ),
+              },
+              {
+                key: 'email',
+                label: 'E-mail',
+                render: (row) =>
+                  row.email ? (
+                    <a href={`mailto:${row.email}`}>{row.email}</a>
+                  ) : (
+                    <span className="text-muted">—</span>
+                  ),
+              },
+            ]}
+            rows={pharmacyFacultyStaff.map((row) => ({ ...row, key: row.name }))}
+            footnote="Official telephone extensions and mobile numbers of the Department of Pharmacy. For general enquiries call 0172 2534101 or the toll-free helpline."
+          />
+        </div>
       </Section>
 
       {/* ------------------------------------------------------------- events */}
