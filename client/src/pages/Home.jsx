@@ -149,7 +149,7 @@ export default function Home() {
             <Link className="btn btn--lg" to="/admissions#apply">
               Start your application
             </Link>
-            <Link className="btn btn--outline-light btn--lg" to="/programmes">
+            <Link className="btn btn--ghost btn--lg" to="/programmes">
               Explore {programmeCount} programmes
             </Link>
           </>
