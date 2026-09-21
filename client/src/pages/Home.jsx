@@ -138,8 +138,8 @@ export default function Home() {
     <>
       <Hero
         variant="home"
-        image="/assets/img/campus-main.jpg"
-        imageAlt="The academic block of the Ved Reyan University campus"
+        image="/assets/img/slider-1.png"
+        imageAlt="Students in white coats walking along the Ved Reyan University campus"
         kicker={`Admissions open — Session ${university.session}`}
         kickerTo="/admissions#apply"
         title="Where medicine, pharmacy and health sciences learn together."
@@ -202,9 +202,9 @@ export default function Home() {
           </div>
           <FigureStack
             images={[
-              { src: '/assets/img/campus-block.jpg', alt: 'Students walking outside the Ved Reyan academic block' },
-              { src: '/assets/img/lab-chemistry.jpg', alt: 'Researchers working in a pharmaceutical chemistry laboratory' },
-              { src: '/assets/img/library-hall.jpg', alt: 'Reading galleries inside the Knowledge Resource Centre' },
+              { src: '/assets/img/slider-1.png', alt: 'Students in white coats walking along the Ved Reyan campus pathway' },
+              { src: '/assets/img/slider-2.png', alt: 'Students working with microscopes in the pharmaceutical research laboratory' },
+              { src: '/assets/img/slider-3.png', alt: 'Graduates celebrating convocation on the Ved Reyan campus' },
             ]}
           />
         </Split>
@@ -438,9 +438,9 @@ export default function Home() {
           </div>
           <FigureStack
             images={[
-              { src: '/assets/img/classroom.jpg', alt: 'Students in a tiered lecture theatre' },
-              { src: '/assets/img/library-study.jpg', alt: 'Student reading in the library' },
-              { src: '/assets/img/desk-research.jpg', alt: 'Students working at a shared desk' },
+              { src: '/assets/img/slider-3.png', alt: 'Graduates celebrating convocation on the Ved Reyan campus' },
+              { src: '/assets/img/slider-1.png', alt: 'Students in white coats walking along the Ved Reyan campus pathway' },
+              { src: '/assets/img/slider-2.png', alt: 'Students working with microscopes in the pharmaceutical research laboratory' },
             ]}
           />
         </Split>
