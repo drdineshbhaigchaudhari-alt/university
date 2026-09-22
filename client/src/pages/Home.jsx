@@ -16,6 +16,7 @@ import {
 } from '@shared/content'
 import useDocumentMeta from '../hooks/useDocumentMeta.js'
 import Hero from '../components/Hero.jsx'
+import HeroSlider from '../components/HeroSlider.jsx'
 import { HeroStrip, Stats } from '../components/Stats.jsx'
 import Tabs from '../components/Tabs.jsx'
 import Accordion from '../components/Accordion.jsx'
@@ -134,32 +135,111 @@ export default function Home() {
     'A health-sciences university in Punjab offering B.Pharm, Pharm.D, M.Pharm, MBBS, Nursing and Allied Health programmes, with a 750-bed teaching hospital and twelve research laboratories.',
   )
 
+  const heroSlides = [
+    {
+      id: 1,
+      image: '/assets/img/slider-1.png',
+      imageAlt: 'Ved Reyan University students walking along campus pathway with modern academic buildings',
+      kicker: `ADMISSIONS OPEN — SESSION ${university.session}`,
+      kickerIcon: '🎓',
+      kickerTo: '/admissions#apply',
+      title: (
+        <>
+          Where medicine, pharmacy and health sciences{' '}
+          <span className="hero-slider__highlight">
+            learn together.
+            <svg className="hero-slider__brush" viewBox="0 0 240 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 9.5C65 3.5 165 3.5 236 8C175 5 80 6.5 4 9.5Z" fill="#c48a3c" />
+            </svg>
+          </span>
+        </>
+      ),
+      lead: 'Ved Reyan University brings four health-science schools, a 750-bed teaching hospital and twelve research laboratories onto one 120-acre campus — so a pharmacy student can follow a molecule from the synthesis bench to the patient’s bedside without leaving the university.',
+      primaryBtn: {
+        text: 'Start your application',
+        to: '/admissions#apply',
+      },
+      secondaryBtn: {
+        text: `Explore ${programmeCount} programmes`,
+        to: '/programmes',
+      },
+      notes: [
+        { label: 'Phase I', value: 'counselling closes 30 April 2026' },
+        { label: 'VRUET 2026', value: 'test window 18–24 May' },
+        { label: 'Scholarships', value: 'up to 100% on merit' },
+      ],
+    },
+    {
+      id: 2,
+      image: '/assets/img/slider-2.png',
+      imageAlt: 'Faculty and student researchers working with microscopes in advanced pharmaceutical formulation laboratory',
+      kicker: 'RESEARCH & DISCOVERY — DST & ICMR FUNDED',
+      kickerIcon: '🔬',
+      kickerTo: '/research',
+      title: (
+        <>
+          Advanced laboratories driving{' '}
+          <span className="hero-slider__highlight">
+            next-generation cures.
+            <svg className="hero-slider__brush" viewBox="0 0 240 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 9.5C65 3.5 165 3.5 236 8C175 5 80 6.5 4 9.5Z" fill="#c48a3c" />
+            </svg>
+          </span>
+        </>
+      ),
+      lead: 'Twelve state-of-the-art instrumentation and formulation laboratories, CPCSEA-registered animal research facility, and 1,450+ Scopus-indexed research publications — where undergraduates discover, formulate, and patent alongside distinguished scientists.',
+      primaryBtn: {
+        text: 'Explore our research',
+        to: '/research',
+      },
+      secondaryBtn: {
+        text: 'Tour laboratories',
+        to: '/infrastructure',
+      },
+      notes: [
+        { label: 'Publications', value: '1,450+ Scopus-indexed' },
+        { label: 'Patents', value: '62 filed & published' },
+        { label: 'Funded Grants', value: '₹14.2 Cr ongoing' },
+      ],
+    },
+    {
+      id: 3,
+      image: '/assets/img/slider-3.png',
+      imageAlt: 'Graduating healthcare professionals tossing graduation caps during convocation at Ved Reyan University',
+      kicker: 'PROVEN PLACEMENTS — 210 TOP RECRUITERS',
+      kickerIcon: '🏆',
+      kickerTo: '/placements',
+      title: (
+        <>
+          Empowering future leaders in{' '}
+          <span className="hero-slider__highlight">
+            global healthcare.
+            <svg className="hero-slider__brush" viewBox="0 0 240 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 9.5C65 3.5 165 3.5 236 8C175 5 80 6.5 4 9.5Z" fill="#c48a3c" />
+            </svg>
+          </span>
+        </>
+      ),
+      lead: 'From premier hospital networks to multinational pharmaceutical innovators, our graduates step directly into high-impact clinical, formulation, and regulatory careers with dedicated 100% placement support and active alumni mentorship.',
+      primaryBtn: {
+        text: 'View placement report',
+        to: '/placements',
+      },
+      secondaryBtn: {
+        text: 'Discover campus life',
+        to: '/campus-life',
+      },
+      notes: [
+        { label: 'Highest Package', value: '₹18.4 LPA' },
+        { label: 'Average Package', value: '₹6.8 LPA' },
+        { label: 'Placement Rate', value: '94% across batches' },
+      ],
+    },
+  ]
+
   return (
     <>
-      <Hero
-        variant="home"
-        image="/assets/img/slider-1.png"
-        imageAlt="Students in white coats walking along the Ved Reyan University campus"
-        kicker={`Admissions open — Session ${university.session}`}
-        kickerTo="/admissions#apply"
-        title="Where medicine, pharmacy and health sciences learn together."
-        lead="Ved Reyan University brings four health-science schools, a 750-bed teaching hospital and twelve research laboratories onto one 120-acre campus — so a pharmacy student can follow a molecule from the synthesis bench to the patient’s bedside without leaving the university."
-        actions={
-          <>
-            <Link className="btn btn--lg" to="/admissions#apply">
-              Start your application
-            </Link>
-            <Link className="btn btn--ghost btn--lg" to="/programmes">
-              Explore {programmeCount} programmes
-            </Link>
-          </>
-        }
-        notes={[
-          { label: 'Phase I', value: 'counselling closes 30 April 2026' },
-          { label: 'VRUET 2026', value: 'test window 18–24 May' },
-          { label: 'Scholarships', value: 'up to 100% on merit' },
-        ]}
-      />
+      <HeroSlider slides={heroSlides} />
 
       <HeroStrip items={university.heroStats} />
 
