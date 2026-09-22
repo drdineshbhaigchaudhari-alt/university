@@ -247,7 +247,7 @@ export default function Home() {
         <>
           From premier hospital networks to multinational pharmaceutical innovators,{' '}
           <br className="hero-slider__br" />
-          our graduates step directly into high-impact clinical, formulation, and regulatory careers —{' '}
+          our graduates step directly into high-impact clinical, formulation, and regulatory careers{' '}
           <br className="hero-slider__br" />
           with dedicated 100% placement support and active alumni mentorship.
         </>
