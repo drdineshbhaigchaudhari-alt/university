@@ -145,7 +145,10 @@ export default function Home() {
       kickerTo: '/admissions#apply',
       title: (
         <>
-          Where medicine, pharmacy and health sciences{' '}
+          Where medicine, pharmacy{' '}
+          <br className="hero-slider__br" />
+          and health sciences{' '}
+          <br className="hero-slider__br" />
           <span className="hero-slider__highlight">
             learn together.
             <svg className="hero-slider__brush" viewBox="0 0 240 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -154,7 +157,15 @@ export default function Home() {
           </span>
         </>
       ),
-      lead: 'Ved Reyan University brings four health-science schools, a 750-bed teaching hospital and twelve research laboratories onto one 120-acre campus — so a pharmacy student can follow a molecule from the synthesis bench to the patient’s bedside without leaving the university.',
+      lead: (
+        <>
+          Ved Reyan University brings four health-science schools, a 750-bed teaching hospital{' '}
+          <br className="hero-slider__br" />
+          and twelve research laboratories onto one 120-acre campus —{' '}
+          <br className="hero-slider__br" />
+          so a pharmacy student can follow a molecule from the synthesis bench to the patient’s bedside without leaving the university.
+        </>
+      ),
       primaryBtn: {
         text: 'Start your application',
         to: '/admissions#apply',
@@ -178,7 +189,9 @@ export default function Home() {
       kickerTo: '/research',
       title: (
         <>
-          Advanced laboratories driving{' '}
+          Advanced laboratories{' '}
+          <br className="hero-slider__br" />
+          driving{' '}
           <span className="hero-slider__highlight">
             next-generation cures.
             <svg className="hero-slider__brush" viewBox="0 0 240 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -187,7 +200,15 @@ export default function Home() {
           </span>
         </>
       ),
-      lead: 'Twelve state-of-the-art instrumentation and formulation laboratories, CPCSEA-registered animal research facility, and 1,450+ Scopus-indexed research publications — where undergraduates discover, formulate, and patent alongside distinguished scientists.',
+      lead: (
+        <>
+          Twelve state-of-the-art instrumentation and formulation laboratories,{' '}
+          <br className="hero-slider__br" />
+          CPCSEA-registered animal research facility, and 1,450+ Scopus-indexed research publications —{' '}
+          <br className="hero-slider__br" />
+          where undergraduates discover, formulate, and patent alongside distinguished scientists.
+        </>
+      ),
       primaryBtn: {
         text: 'Explore our research',
         to: '/research',
@@ -211,7 +232,9 @@ export default function Home() {
       kickerTo: '/placements',
       title: (
         <>
-          Empowering future leaders in{' '}
+          Empowering future leaders{' '}
+          <br className="hero-slider__br" />
+          in{' '}
           <span className="hero-slider__highlight">
             global healthcare.
             <svg className="hero-slider__brush" viewBox="0 0 240 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -220,7 +243,15 @@ export default function Home() {
           </span>
         </>
       ),
-      lead: 'From premier hospital networks to multinational pharmaceutical innovators, our graduates step directly into high-impact clinical, formulation, and regulatory careers with dedicated 100% placement support and active alumni mentorship.',
+      lead: (
+        <>
+          From premier hospital networks to multinational pharmaceutical innovators,{' '}
+          <br className="hero-slider__br" />
+          our graduates step directly into high-impact clinical, formulation, and regulatory careers —{' '}
+          <br className="hero-slider__br" />
+          with dedicated 100% placement support and active alumni mentorship.
+        </>
+      ),
       primaryBtn: {
         text: 'View placement report',
         to: '/placements',

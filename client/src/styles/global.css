@@ -402,10 +402,10 @@ blockquote{margin:0;padding:0}
   font-family:var(--font-display);
   font-size:clamp(2.3rem, 4.4vw, 3.85rem);
   font-weight:700;
-  line-height:1.12;
+  line-height:1.16;
   color:#04121f;
-  margin-bottom:.42em;
-  max-width:1100px;
+  margin-bottom:.45em;
+  max-width:980px;
   letter-spacing:-.015em;
 }
 .hero-slider__highlight{
@@ -425,9 +425,17 @@ blockquote{margin:0;padding:0}
 .hero-slider__lead{
   font-size:clamp(1.02rem, 1.35vw, 1.2rem);
   color:#2c3e50;
-  max-width:920px;
-  line-height:1.65;
+  max-width:860px;
+  line-height:1.68;
   margin-bottom:1.9em;
+}
+.hero-slider__br{
+  display:none;
+}
+@media(min-width:641px){
+  .hero-slider__br{
+    display:block;
+  }
 }
 .hero-slider__actions{
   display:flex;
