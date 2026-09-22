@@ -218,16 +218,40 @@ blockquote{margin:0;padding:0}
 }
 
 /* Primary nav */
-.navbar{background:var(--navy);position:relative}
-.nav{display:flex;list-style:none;margin:0;padding:0;flex-wrap:wrap}
-.nav > li{position:relative;margin:0}
+.navbar{background:var(--navy);position:relative;width:100%}
+.nav{
+  display:flex;
+  list-style:none;
+  margin:0;
+  padding:0;
+  width:100%;
+  justify-content:space-between;
+  align-items:stretch;
+}
+.nav > li{
+  position:relative;
+  margin:0;
+  flex:1 1 auto;
+  display:flex;
+}
 .nav > li > a{
-  display:flex;align-items:center;gap:.35em;color:#e5eef5;font-size:.83rem;font-weight:600;
-  letter-spacing:.06em;text-transform:uppercase;padding:1.05em .92em;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  gap:.35em;
+  color:#e5eef5;
+  font-size:.82rem;
+  font-weight:600;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  padding:1.05em clamp(.4em, 1.1vw, 1.2em);
+  white-space:nowrap;
+  text-align:center;
 }
 .nav > li:first-child > a{padding-left:10px}
 @media(max-width:1200px){
-  .nav > li > a{padding-inline:.7em;font-size:.78rem}
+  .nav > li > a{padding-inline:.4em;font-size:.76rem}
   .nav > li:first-child > a{padding-left:10px}
 }
 .nav > li > a:hover,.nav > li.is-open > a{background:var(--teal);color:#fff}
