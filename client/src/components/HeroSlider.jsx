@@ -66,9 +66,8 @@ export default function HeroSlider({ slides }) {
       {/* Gentle left feathering for text contrast — right side is 100% clear */}
       <div className="hero-slider__scrim" aria-hidden="true" />
 
-      {/* Foreground Content */}
-      <div className="wrap">
-        <div className="hero-slider__content-wrap">
+      {/* Foreground Content - Full width layout, not confined to a container */}
+      <div className="hero-slider__content-wrap">
           {slides.map((slide, idx) => {
             const isActive = idx === current
             return (
@@ -157,7 +156,6 @@ export default function HeroSlider({ slides }) {
             )
           })}
         </div>
-      </div>
 
       {/* Navigation arrows */}
       {total > 1 ? (
