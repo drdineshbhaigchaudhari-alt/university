@@ -204,9 +204,9 @@ export default function Home() {
         <>
           Twelve state-of-the-art instrumentation and formulation laboratories,{' '}
           <br className="hero-slider__br" />
-          CPCSEA-registered animal research facility, and 1,450+ Scopus-indexed research publications —{' '}
+          CPCSEA-registered animal research facility, and 1,450+ Scopus-indexed{' '}
           <br className="hero-slider__br" />
-          where undergraduates discover, formulate, and patent alongside distinguished scientists.
+          research publications.
         </>
       ),
       primaryBtn: {

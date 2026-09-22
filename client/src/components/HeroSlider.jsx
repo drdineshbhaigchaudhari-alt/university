@@ -7,19 +7,18 @@ import { Link } from 'react-router-dom'
  */
 export default function HeroSlider({ slides }) {
   const [current, setCurrent] = useState(0)
-  const [isPaused, setIsPaused] = useState(false)
   const timerRef = useRef(null)
 
   const total = slides?.length || 0
 
   useEffect(() => {
-    if (total <= 1 || isPaused) return
+    if (total <= 1) return
     timerRef.current = setInterval(() => {
       setCurrent((prev) => (prev + 1) % total)
     }, 6000)
 
     return () => clearInterval(timerRef.current)
-  }, [total, isPaused, current])
+  }, [total, current])
 
   function goTo(index) {
     setCurrent((index + total) % total)
@@ -38,8 +37,6 @@ export default function HeroSlider({ slides }) {
   return (
     <section
       className="hero-slider"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
       aria-roledescription="carousel"
       aria-label="Campus Highlights"
     >

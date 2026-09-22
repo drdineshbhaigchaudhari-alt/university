@@ -215,8 +215,11 @@ blockquote{margin:0;padding:0}
   display:flex;align-items:center;gap:.35em;color:#e5eef5;font-size:.83rem;font-weight:600;
   letter-spacing:.06em;text-transform:uppercase;padding:1.05em .92em;
 }
-.nav > li:first-child > a{padding-left:0}
-@media(max-width:1200px){.nav > li > a{padding-inline:.7em;font-size:.78rem}}
+.nav > li:first-child > a{padding-left:10px}
+@media(max-width:1200px){
+  .nav > li > a{padding-inline:.7em;font-size:.78rem}
+  .nav > li:first-child > a{padding-left:10px}
+}
 .nav > li > a:hover,.nav > li.is-open > a{background:var(--teal);color:#fff}
 .nav > li.is-active > a{background:var(--teal-700);color:#fff}
 .nav .caret{width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-2px);opacity:.7}
