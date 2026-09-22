@@ -74,7 +74,7 @@ export default function Header() {
   return (
     <header className={`site-header${stuck ? ' is-stuck' : ''}`}>
       <div className="topbar">
-        <div className="wrap">
+        <div className="header-wrap">
           <ul className="topbar-links">
             {topbarLinks.map((link) => (
               <li key={link.to + link.label}>
@@ -91,7 +91,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="wrap">
+      <div className="header-wrap">
         <div className="brandbar">
           <Link className="brand" to="/" aria-label="Ved Reyan University Home">
             <img
@@ -112,7 +112,7 @@ export default function Header() {
       </div>
 
       <nav className="navbar" aria-label="Primary">
-        <div className="wrap">
+        <div className="header-wrap">
           <button
             className="nav-toggle"
             type="button"
