@@ -222,7 +222,7 @@ export default function Infrastructure() {
         <SectionHead
           eyebrow="Campus"
           title="Everything else on the 120 acres"
-          lead={`${university.address.line1}, ${university.address.line2} — 35 minutes from Chandigarh.`}
+          lead={`${university.address.line1}, ${university.address.line2}, Ahmedabad, Gujarat.`}
         />
         <Grid cols={3}>
           {campusInfrastructure.map((item) => (

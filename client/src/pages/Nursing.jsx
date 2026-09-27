@@ -138,7 +138,7 @@ export default function Nursing() {
         </Split>
 
         <div className="mt-4">
-          <AccreditationStrip items={['INC approved', 'Punjab State Nursing Council registered', 'NABH-accredited teaching hospital']} />
+          <AccreditationStrip items={['INC approved', 'Gujarat Nursing Council registered', 'NABH-accredited teaching hospital']} />
         </div>
       </Section>
 

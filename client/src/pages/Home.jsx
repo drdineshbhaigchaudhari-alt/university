@@ -132,7 +132,7 @@ const entryTabs = ['after-12', 'after-diploma', 'after-graduation', 'after-pg'].
 export default function Home() {
   useDocumentMeta(
     `${university.name}`,
-    'A health-sciences university in Punjab offering B.Pharm, Pharm.D, M.Pharm, MBBS, Nursing and Allied Health programmes, with a 750-bed teaching hospital and twelve research laboratories.',
+    'A health-sciences university in Ahmedabad, Gujarat, offering B.Pharm, Pharm.D, M.Pharm, MBBS, Nursing and Allied Health programmes, with a 750-bed teaching hospital and twelve research laboratories.',
   )
 
   const heroSlides = [
@@ -297,7 +297,7 @@ export default function Home() {
             <div className="mt-2">
               <TickList
                 items={[
-                  'A 120-acre residential campus on NH-44, 35 minutes from Chandigarh',
+                  'A 120-acre residential campus on the S P Ring Road, Ahmedabad',
                   'Twelve instrumentation and formulation laboratories, including a CPCSEA-registered animal house',
                   'Clinical training inside our own 750-bed multi-speciality teaching hospital',
                   '1,450+ Scopus-indexed publications and 62 patent filings from resident faculty',

@@ -20,16 +20,15 @@ export const university = {
     line3: 'Ahmedabad - 380060, Gujarat, India',
   },
   phone: {
-    tollFree: '1800 419 7788',
-    landline: '0172 2541716',
-    registrar: '0172 2541716, 2534867',
-    uipsChairperson: '0172 2534101, 9876061147',
+    tollFree: '1800 258 4466',
+    landline: '079 4890 7700',
   },
   email: {
-    hr: 'hr@vedruni.com',
-    registrar: 'registrar@vedruni.com',
-    regrPU: 'regr@vedruni.com',
-    chairpersonUIPS: 'chairperson.uips@vedruni.com',
+    info: 'info@vedreyanuniversity.com',
+    contact: 'contact@vedreyanuniversity.com',
+    office: 'office@vedreyanuniversity.com',
+    registrar: 'registrar@vedreyanuniversity.com',
+    hr: 'hr@vedreyanuniversity.com',
   },
 
   keyDates: [
@@ -47,7 +46,7 @@ export const university = {
   ],
 
   campusFacts: [
-    { value: '120 acres', label: 'Residential campus on NH-44' },
+    { value: '120 acres', label: 'Residential campus in Ahmedabad' },
     { value: '9,400', label: 'Students, of whom 2,180 are postgraduates' },
     { value: '612', label: 'Full-time faculty across four schools' },
     { value: '68', label: 'Countries represented in the student body' },
@@ -96,7 +95,7 @@ export const university = {
       validTo: 'Annual renewal',
     },
     {
-      body: 'Punjab State Nursing Council',
+      body: 'Gujarat Nursing Council',
       status: 'Registered',
       scope: 'All nursing programmes',
       validTo: 'Annual renewal',
@@ -137,7 +136,7 @@ export const university = {
     { year: 2011, text: 'Ved Reyan Institute of Pharmacy founded; D.Pharm approved by the Pharmacy Council of India.' },
     { year: 2013, text: 'B.Pharm launched with an intake of 60; first analytical instrumentation laboratory commissioned.' },
     { year: 2015, text: 'M.Pharm approved in three specialisations; animal house registered with CPCSEA.' },
-    { year: 2016, text: 'Ved Reyan University constituted under the Punjab Private Universities Act; UGC Section 2(f) recognition.' },
+    { year: 2016, text: 'Ved Reyan University constituted under the Gujarat Private Universities Act; UGC Section 2(f) recognition.' },
     { year: 2017, text: 'Ved Reyan Medical College & Hospital opens with 300 beds; Pharm.D programme approved.' },
     { year: 2019, text: 'First MBBS cohort admitted after NMC recognition; Central Instrumentation Facility opened.' },
     { year: 2020, text: 'School of Nursing established with INC approval; hospital reaches 500 beds.' },

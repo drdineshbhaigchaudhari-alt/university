@@ -168,7 +168,7 @@ export default function Faculty() {
           lead="Direct extension numbers, mobile helplines, and email addresses for faculty, laboratory superintendents, and technical officers."
         />
         <DataTable
-          caption="Faculty & Staff directory with official telephone numbers and emails (STD Code: 0172)."
+          caption="Faculty & Staff directory with official telephone numbers and emails (STD Code: 079)."
           columns={[
             { key: 'name', label: 'Name', render: (row) => <b>{row.name}</b> },
             { key: 'designation', label: 'Designation' },
@@ -199,7 +199,7 @@ export default function Faculty() {
             },
           ]}
           rows={pharmacyFacultyStaff.map((row) => ({ ...row, key: row.name }))}
-          footnote="Telephone numbers can be dialed directly with STD code 0172 (e.g. 0172-2534101). List displayed in departmental hierarchy."
+          footnote="Telephone numbers can be dialed directly with STD code 079 (e.g. 079-4890-7701). List displayed in departmental hierarchy."
         />
       </Section>
 

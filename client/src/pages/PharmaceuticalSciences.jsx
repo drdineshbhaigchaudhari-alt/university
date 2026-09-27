@@ -457,7 +457,7 @@ export default function PharmaceuticalSciences() {
           />
           <FeatureCard
             title="Shared instrumentation"
-            text="Reciprocal access to NIPER Mohali and CSIR-IMTECH for NMR, single-crystal XRD and high-end mass spectrometry."
+            text="Reciprocal access to NIPER Ahmedabad for NMR, single-crystal XRD and high-end mass spectrometry."
           />
           <FeatureCard
             title="Two exchange semesters"
@@ -632,7 +632,7 @@ export default function PharmaceuticalSciences() {
               },
             ]}
             rows={pharmacyFacultyStaff.map((row) => ({ ...row, key: row.name }))}
-            footnote="Official telephone extensions and mobile numbers of the Department of Pharmacy. For general enquiries call 0172 2534101 or the toll-free helpline."
+            footnote="Official telephone extensions and mobile numbers of the Department of Pharmacy. For general enquiries call 079 4890 7700 or the toll-free helpline."
           />
         </div>
       </Section>

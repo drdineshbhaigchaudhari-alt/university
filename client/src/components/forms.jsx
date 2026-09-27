@@ -170,7 +170,7 @@ export function EnquiryForm({ compact = false, source = 'website', defaultProgra
           {state === 'sending' ? 'Sending…' : 'Send enquiry'}
         </button>
         <span className="muted">
-          <small>Or call 1800 419 7788, 9 am – 6 pm</small>
+          <small>Or call 1800 258 4466, 9 am – 6 pm</small>
         </span>
       </div>
 
@@ -223,7 +223,7 @@ export function ApplicationForm() {
         <p className="muted">
           <small>
             Nothing further is required from you today. If you have not heard from us within three
-            working days, call 1800 419 7788 and quote the reference above.
+            working days, call 1800 258 4466 and quote the reference above.
           </small>
         </p>
       </div>

@@ -105,7 +105,7 @@ export default function About() {
         lead="A single pharmacy institute in 2011. Four schools, a 750-bed hospital and 9,400 students today. What has not changed is the size of a practical batch."
         notes={[
           { label: 'Established', value: `${university.established} · university status ${university.universityStatusYear}` },
-          { label: 'Campus', value: '120 acres, Rajpura, Punjab' },
+          { label: 'Campus', value: '120 acres, Ahmedabad, Gujarat' },
           { label: 'NAAC', value: 'A++ (CGPA 3.61)' },
         ]}
       />
@@ -134,7 +134,7 @@ export default function About() {
             </p>
             <p>
               B.Pharm followed in 2013, M.Pharm in 2015. The university was constituted in 2016 under
-              the Punjab Private Universities Act, and the first MBBS cohort was admitted in 2019 once
+              the Gujarat Private Universities Act, and the first MBBS cohort was admitted in 2019 once
               the teaching hospital reached its sanctioned bed strength. Nursing and allied health
               followed in 2020 and 2021. The hospital crossed 750 beds in 2024 and was reaccredited by
               NABH the same year.
@@ -262,7 +262,7 @@ export default function About() {
         <SectionHead
           eyebrow="Leadership & governance"
           title="Who is accountable for what"
-          lead="The university is governed by a Board of Management, an Academic Council and a Board of Studies for each school, constituted under the Punjab Private Universities Act."
+          lead="The university is governed by a Board of Management, an Academic Council and a Board of Studies for each school, constituted under the Gujarat Private Universities Act."
         />
         <div className="mb-3">
           <Grid cols={4}>
@@ -332,13 +332,13 @@ export default function About() {
           <div>
             <SectionHead
               eyebrow="Campus & location"
-              title="Rajpura, Punjab — thirty-five minutes from Chandigarh"
+              title="Ahmedabad, Gujarat — on the Sardar Patel Ring Road"
             />
             <p>
-              The campus sits on 120 acres beside NH-44, between Rajpura and Patiala. Chandigarh
-              international airport is 46 km away, Ambala Cantt railway station 28 km, and Rajpura
-              railway station 6 km. University shuttles run to Chandigarh, Patiala and Ambala on a
-              published timetable.
+              The campus sits on 120 acres beside the S P Ring Road at Ognaj Circle, in north-west
+              Ahmedabad. Sardar Vallabhbhai Patel International Airport is about 22 km away, Sabarmati
+              railway station about 13 km, and Ahmedabad Junction about 20 km. University shuttles run
+              to Ahmedabad city, Gandhinagar and Sabarmati on a published timetable.
             </p>
             <div className="mt-2">
               <TickList

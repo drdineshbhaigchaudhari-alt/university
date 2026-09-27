@@ -79,11 +79,11 @@ export default function CampusLife() {
               The campus is residential by design: seven halls, a food court, a health centre open
               round the clock, a library that stays open until midnight and 24 hours during
               examinations, and enough sports provision that a student who wants to swim at six in
-              the morning can. Shuttles run to Chandigarh, Patiala and Ambala on a published
+              the morning can. Shuttles run to Ahmedabad city, Gandhinagar and Sabarmati on a published
               timetable, so a weekend away does not require a car.
             </p>
             <p>
-              What we are less good at, and will say so: the campus is thirty-five minutes from a
+              What we are less good at, and will say so: the campus is on the edge of the
               city, and students who want a dense urban social life find the first semester quiet.
               The societies exist partly to fix that, and they are student-run rather than
               administration-run for the same reason.
@@ -94,7 +94,7 @@ export default function CampusLife() {
                   'Separate residence halls for men and women, all Wi-Fi enabled, with resident wardens',
                   '24×7 on-campus health centre plus free consultation at the teaching hospital',
                   '900-seat auditorium, food court and a co-operative store',
-                  'Shuttle services to Chandigarh, Patiala and Ambala on a published timetable',
+                  'Shuttle services to Ahmedabad city, Gandhinagar and Sabarmati on a published timetable',
                 ]}
               />
             </div>

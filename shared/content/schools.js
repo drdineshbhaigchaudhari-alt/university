@@ -78,7 +78,7 @@ export const schools = [
       'Evening-shift Post-Basic B.Sc. cohort for nurses in active employment',
       'Residency-pattern Nurse Practitioner in Critical Care programme',
     ],
-    approvals: ['INC approved', 'Punjab State Nursing Council registered'],
+    approvals: ['INC approved', 'Gujarat Nursing Council registered'],
   },
   {
     key: 'allied',

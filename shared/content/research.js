@@ -115,7 +115,7 @@ export const fundedProjects = [
     pi: 'Dr. Naveen Chandran',
   },
   {
-    title: 'Community de-prescribing of antimicrobials in rural Punjab',
+    title: 'Community de-prescribing of antimicrobials in rural Gujarat',
     agency: 'ICMR',
     amount: '₹88.0 L',
     duration: '2024–2027',

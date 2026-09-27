@@ -40,7 +40,7 @@ export default function useApi(endpoint) {
       } catch {
         setState('error')
         setMessage(
-          'We could not reach the server. Check your connection, or call the admission helpline on 1800 419 7788.',
+          'We could not reach the server. Check your connection, or call the admission helpline on 1800 258 4466.',
         )
         return { ok: false }
       }

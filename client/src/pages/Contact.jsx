@@ -30,36 +30,31 @@ const offices = [
   {
     name: 'Admissions office',
     detail: 'Applications, eligibility, counselling, scholarships and fee queries.',
-    phone: university.phone.tollFree,
-    email: university.email.registrar,
+    email: university.email.info,
     hours: 'Monday–Saturday, 09:00–18:00',
   },
   {
     name: 'Registrar’s office',
     detail: 'Prof. Yajvender Pal Verma — Transcripts, migration, verification, statutory disclosures.',
-    phone: '0172 2541716, 2534867',
-    email: 'regr@vedruni.com, registrar@vedruni.com',
+    email: university.email.registrar,
     hours: 'Monday–Friday, 10:00–17:00',
   },
   {
     name: 'Department of Pharmaceutical Sciences (UIPS)',
     detail: 'Prof. (Dr.) Ranju Bansal — Chairperson office, academic administration, research.',
-    phone: '0172 2534101, 9876061147',
-    email: 'chairperson.uips@vedruni.com',
+    email: university.email.office,
     hours: 'Monday–Friday, 09:00–17:00',
   },
   {
     name: 'Placement & Industry Cell',
     detail: 'Prof. V. R. Sinha — Campus drives, internship quotas, visiting modules, CDMO partners.',
-    phone: '0172 2534107, 9417554847',
-    email: 'vrsinha@vedruni.com, hr@vedruni.com',
+    email: university.email.hr,
     hours: 'Monday–Friday, 10:00–17:00',
   },
   {
     name: 'Grievance & Student Welfare',
     detail: 'Superintendent Ram Kumar — Grievance redressal, anti-ragging, RTI and student support.',
-    phone: '0172 2534110, 9463495832',
-    email: university.email.registrar,
+    email: university.email.contact,
     hours: 'Monday–Saturday, 09:00–18:00 · helpline 24×7',
   },
 ]
@@ -67,7 +62,7 @@ const offices = [
 const grievanceRoutes = [
   {
     q: 'Academic grievance — marks, attendance, teaching, supervision',
-    a: 'Raise it first with the Head of Department, then the Dean of the school, then the Grievance Redressal Committee, which must respond within fifteen working days. Examination results have a separate route: re-evaluation and answer-script inspection, with a published fee and a thirty-day window from the date of result. Write to registrar@vedruni.com if you are unsure which applies — it will be routed rather than returned.',
+    a: 'Raise it first with the Head of Department, then the Dean of the school, then the Grievance Redressal Committee, which must respond within fifteen working days. Examination results have a separate route: re-evaluation and answer-script inspection, with a published fee and a thirty-day window from the date of result. Write to registrar@vedreyanuniversity.com if you are unsure which applies — it will be routed rather than returned.',
   },
   {
     q: 'Ragging',
@@ -119,7 +114,7 @@ export default function Contact() {
         }
         notes={[
           { label: 'Helpline', value: `${phone.tollFree} (toll free)` },
-          { label: 'Admissions', value: email.registrar },
+          { label: 'Admissions', value: email.info },
           { label: 'Campus visits', value: 'Saturdays, 10:30' },
         ]}
       />
@@ -171,7 +166,13 @@ export default function Contact() {
             <div className="mt-3">
               <FeatureCard icon="mail" title="Email">
                 <p className="mb-0">
-                  <a href={`mailto:${email.registrar}`}>{email.registrar}</a> — registrar &amp; admissions
+                  <a href={`mailto:${email.info}`}>{email.info}</a> — admissions &amp; general information
+                  <br />
+                  <a href={`mailto:${email.contact}`}>{email.contact}</a> — enquiries &amp; student support
+                  <br />
+                  <a href={`mailto:${email.registrar}`}>{email.registrar}</a> — registrar
+                  <br />
+                  <a href={`mailto:${email.office}`}>{email.office}</a> — administrative office
                   <br />
                   <a href={`mailto:${email.hr}`}>{email.hr}</a> — HR &amp; careers
                 </p>
@@ -193,32 +194,9 @@ export default function Contact() {
             { key: 'name', label: 'Office', render: (row) => <b>{row.name}</b> },
             { key: 'detail', label: 'Handles' },
             {
-              key: 'phone',
-              label: 'Telephone',
-              render: (row) => (
-                <span>
-                  {row.phone.split(',').map((num, i) => (
-                    <span key={num}>
-                      {i > 0 ? ', ' : ''}
-                      <a href={`tel:${num.replace(/[\s+]/g, '')}`}>{num.trim()}</a>
-                    </span>
-                  ))}
-                </span>
-              ),
-            },
-            {
               key: 'email',
               label: 'Email',
-              render: (row) => (
-                <span>
-                  {row.email.split(',').map((em, i) => (
-                    <span key={em}>
-                      {i > 0 ? ', ' : ''}
-                      <a href={`mailto:${em.trim()}`}>{em.trim()}</a>
-                    </span>
-                  ))}
-                </span>
-              ),
+              render: (row) => <a href={`mailto:${row.email}`}>{row.email}</a>,
             },
             { key: 'hours', label: 'Hours' },
           ]}
@@ -273,28 +251,28 @@ export default function Contact() {
         <SectionHead
           eyebrow="Directions"
           title="Getting here"
-          lead="The campus is on NH-44 between Rajpura and Patiala, thirty-five minutes from Chandigarh."
+          lead="The campus is on the S P Ring Road at Ognaj Circle, off the Gota–Vadsar Highway in north-west Ahmedabad."
         />
         <Grid cols={4}>
           <FeatureCard
             icon="globe"
             title="By air"
-            text="Chandigarh International Airport (IXC) is 46 km away, about an hour by road. Pre-paid taxis and app cabs both serve the campus."
+            text="Sardar Vallabhbhai Patel International Airport (AMD) is about 22 km away, roughly 45 minutes by road. Pre-paid taxis and app cabs both serve the campus."
           />
           <FeatureCard
             icon="building"
             title="By train"
-            text="Rajpura Junction is 6 km; Ambala Cantt, with more long-distance services, is 28 km. University shuttles meet scheduled arrivals during admission weeks."
+            text="Sabarmati Junction is about 13 km; Ahmedabad Junction (Kalupur), with more long-distance services, is about 20 km. University shuttles meet scheduled arrivals during admission weeks."
           />
           <FeatureCard
             icon="pin"
             title="By road"
-            text="Directly off NH-44. Parking is free for visitors at Gate 2. Set your navigation to the Ved Reyan Knowledge City main gate rather than the postal address."
+            text="Directly off the S P Ring Road near Ognaj Circle. Parking is free for visitors at Gate 2. Set your navigation to the Ved Reyan Knowledge City main gate rather than the postal address."
           />
           <FeatureCard
             icon="users"
             title="University shuttles"
-            text="Scheduled services to Chandigarh, Patiala and Ambala on a published timetable, free for students and staff with a valid card."
+            text="Scheduled services to Ahmedabad city, Gandhinagar and Sabarmati on a published timetable, free for students and staff with a valid card."
           />
         </Grid>
 

@@ -42,7 +42,7 @@ export const recruiters = [
 ]
 
 export const partners = [
-  { name: 'NIPER Mohali', domain: 'Instrument access' },
+  { name: 'NIPER Ahmedabad', domain: 'Instrument access' },
   { name: 'CSIR-IMTECH', domain: 'Joint projects' },
   { name: 'PGIMER', domain: 'Clinical research' },
   { name: 'Sun Pharma', domain: 'Internship quota' },
